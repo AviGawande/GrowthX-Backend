@@ -47,6 +47,62 @@ To Create an assignment submission portal.
        }
        ```
      - ![Screenshot 2024-10-09 213906](https://github.com/user-attachments/assets/e76c5bb0-6b36-4521-b459-0c228ce042e9)
+   
+   - 2.Register a New Admin:
+     - Method: POST
+     - URL: `http://localhost:8000/register`
+     - Body: Select "Raw" and then "JSON" from the dropdown in the Body tab:
+       ```
+       {
+       "username": "testadmin",
+       "password": "adminpassword",
+       "user_type": "admin"
+       }
+       ```
+     - ![Screenshot 2024-10-09 214040](https://github.com/user-attachments/assets/dab0b114-344b-4f82-aaf2-14abf1a51e45)
+    
+   - 3.Login for (User and Admin Both):
+     - Method: POST
+     - URL: `http://localhost:8000/login`
+     - Auth:
+         - Select the "Authorization" tab.
+         - Choose "Basic Auth" from the dropdown.
+         - Enter:
+         - Username: `testuser` or `testadmin` (based on the account you want to test)
+         - Password: `testpassword` or `adminpassword` (based on the account you want to test)
+     - Login as User:![Screenshot 2024-10-09 214628](https://github.com/user-attachments/assets/d559eb64-74df-4b60-807c-f01de1b82a0b)
+     - Login as Admin:![Screenshot 2024-10-09 214758](https://github.com/user-attachments/assets/7ca6779e-0557-483e-a2f2-037df10bc2ca)
+ 
+   - 4.Upload an Assignment (as a user):
+     - Method: POST
+     - URL: `http://localhost:8000/upload`
+     - Auth:
+         - Use "Basic Auth" (enter `testuser` and `testpassword`).
+     - Body: Select "Raw" and then "JSON" from the dropdown in the Body tab:
+       ```
+       {
+          "task": "Complete Python assignment",
+           "admin_username": "testadmin"
+        }
+       ```
+     - ![Screenshot 2024-10-09 215032](https://github.com/user-attachments/assets/603c9518-dc84-4cf1-8282-e055baaf5d59)
+
+       
+   - 5.Get All Admins:
+     - Method: GET
+     - URL: `http://localhost:8000/upload`
+     - Auth:
+         - Use "Basic Auth" (enter `testuser` and `testpassword`).
+     - Body: Select "Raw" and then "JSON" from the dropdown in the Body tab:
+       ```
+       {
+          "task": "Complete Python assignment",
+           "admin_username": "testadmin"
+        }
+       ```
+
+
+
 
 
 
