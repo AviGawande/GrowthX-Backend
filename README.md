@@ -4,7 +4,7 @@
 To Create an assignment submission portal.
 
 ### Technology Used:
-- 1. Database:
+- 1.Database:
    - Use MongoDB as your database.
    - MongoDB Compass
 
@@ -12,7 +12,7 @@ To Create an assignment submission portal.
    - Python
    - FastAPI
 
-- 3. Testing:
+- 3.Testing:
    - Used Postman for Testing Client URls.
 
 ### Type of Users:
