@@ -14,8 +14,18 @@ To Create an assignment submission portal.
 
 - 3.Testing:
    - Used Postman for Testing Client URls.
+
+### Type of Users:
+   - 1.Users.
+      - a. Register and log in.
+      - b. Upload assignments.
+   - 2.Admin.
+      - a. Register and log in.
+      - b. View assignments tagged to them.
+      - c. Accept or reject assignments.
  
-## How to SetUp this project locally and Test the Results.
+## How to SetUp this project locally and Test the Results:
+
 - 1.Fork/Clone this repo:
    - `git clone https://github.com/AviGawande/GrowthX-Backend`
 - 2.In the same directory create a virtual environment(venv):
@@ -86,35 +96,36 @@ To Create an assignment submission portal.
         }
        ```
      - ![Screenshot 2024-10-09 215032](https://github.com/user-attachments/assets/603c9518-dc84-4cf1-8282-e055baaf5d59)
-
-       
+  
    - 5.Get All Admins:
      - Method: GET
-     - URL: `http://localhost:8000/upload`
+     - URL: `http://localhost:8000/admins`
+     - **No Authentication**: This is a public endpoint. You can simply send the request without any authentication.
+     - ![Screenshot 2024-10-09 215142](https://github.com/user-attachments/assets/83cec580-f5ad-49e5-bc0e-fc3e3f2155d2)
+
+   - 6.View Assignments (as an admin):
+     - Method: GET
+     - URL: `http://localhost:8000/assignments`
      - Auth:
-         - Use "Basic Auth" (enter `testuser` and `testpassword`).
-     - Body: Select "Raw" and then "JSON" from the dropdown in the Body tab:
-       ```
-       {
-          "task": "Complete Python assignment",
-           "admin_username": "testadmin"
-        }
-       ```
+         - Use "Basic Auth" (enter `testadmin` and `adminpassword`).
+     - ![Screenshot 2024-10-09 215327](https://github.com/user-attachments/assets/d14316b0-e7da-4372-8d03-c9d1b90b5371)
+    
+   - 7.Accept an Assignment:
+     - Method: POST
+     - URL: `http://localhost:8000/assignments/{assignment_id}/accept`
+     - Auth:
+         - Use "Basic Auth" (enter `admin2` and `Admin@222`).
+     - Replace {assignment_id}: with the actual assignment ID you want to accept.
+     - ![Screenshot 2024-10-10 134419](https://github.com/user-attachments/assets/573d52e9-b973-40d5-b328-aebed74b7e5c)
 
+   - 8.Reject an Assignment:
+     - Method: POST
+     - URL: `http://localhost:8000/assignments/{assignment_id}/reject`
+     - Auth:
+         - Use "Basic Auth" (enter `admin2` and `Admin@222`).
+     - Replace {assignment_id}: with the actual assignment ID you want to reject..
+     - ![Screenshot 2024-10-10 135336](https://github.com/user-attachments/assets/7fcc6b98-15d6-4c44-8891-8ba60dc119b1)
 
+## I am also posting the Postman Collection here where i tested all the API Enpoints:
+https://www.postman.com/abhigawande123/workspace/remote-bricks-apis/collection/36164059-d97f0850-f40b-4490-abae-0d8594ec5d97?action=share&creator=36164059
 
-
-
-
-
-
-     
-
-### Type of Users:
-   - 1.Users.
-      - a. Register and log in.
-      - b. Upload assignments.
-   - 2.Admin.
-      - a. Register and log in.
-      - b. View assignments tagged to them.
-      - c. Accept or reject assignments.
