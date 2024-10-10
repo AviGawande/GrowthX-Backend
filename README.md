@@ -22,7 +22,7 @@ To Create an assignment submission portal.
    - Install dependencies if not. `pip install virtualenv`
    - Create a new Virtual.Env name myenv. `python -m venv myenv`
    - Activate the Virtual-Environment(myenv). `myenv\Scripts\activate`
-- 3. CD into the project directory of clonned project:
+- 3.CD into the project directory of clonned project:
    - `cd GrowthX-Backend`
    - Install the Requirements file for project:
       - `pip install -r requirements. txt `
@@ -30,6 +30,24 @@ To Create an assignment submission portal.
    - `uvicorn main:app --reload`
    - visit this url `http://127.0.0.1:8000/` on browser.
 - 5.And your backend system is running locally.
+
+
+  # Results:
+  I have attached the snapshots of the each enpoint working successfully along with Postman Urls each.
+
+  - 1.Register a New User:
+     - Method: POST
+     - URL: `http://localhost:8000/register`
+     - Body: Select "Raw" and then "JSON" from the dropdown in the Body tab:
+       ```
+       {
+       "username": "testuser",
+       "password": "testpassword",
+       "user_type": "user"
+       }
+       ```
+     - ![Screenshot 2024-10-09 213906](https://github.com/user-attachments/assets/e76c5bb0-6b36-4521-b459-0c228ce042e9)
+
 
 
 
