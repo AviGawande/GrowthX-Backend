@@ -14,6 +14,17 @@ To Create an assignment submission portal.
 
 - 3.Testing:
    - Used Postman for Testing Client URls.
+ 
+## How to SetUp this project locally and Test the Results.
+- 1.Fork/Clone this repo:
+   - `git clone https://github.com/AviGawande/GrowthX-Backend`
+
+
+
+
+
+
+     
 
 ### Type of Users:
    - 1.Users.
